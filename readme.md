@@ -1,17 +1,41 @@
 # A toDoApp from Scratch
 
+
+**NOTE** Development in progress
+
+
 The main goal of this project is to practice 
-OOP programming. 
+OOP programming. It consists of the following objects:
 
-## Router
-* `Router` class */src/classes/router.php*
-* `routes.php` file */routes.php*
+* Router -> */src/classes/Router.php*
+* Connection -> */src/database/Connection.php*
+* QueryBuilder -> */src/database/QueryBuilder.php*
+* TasksController -> */src/controller/TasksController.php*
 
-### Routing process
+And is programmed against the following interface(s):
 
-Within the `bootstrap.php` we initiate a router object. In `routes.php` we map all
-URIs to the corresponding controller and use the `define()` method to assign these 
-mappings to the `$routes` property of the object. 
+* ResponseToTasks -> */src/contracts/ResponseToTasks.php*
+
+
+## Routing
+
+`index.php` is the apps entry point. The `Router::load()` function instantiates a *Router* object. The routing maps
+at `routes.php` are chained into the objects `$routes` variable. The `direct()` methods checks the requested *URI*
+against the mapped routes and requests the responsive controller. 
+
+## Controller
+
+*tbd*
+
+
+## Models
+
+*tbd*
+
+
+## Views
+
+*tbd*
 
 
 
