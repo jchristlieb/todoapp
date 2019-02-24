@@ -21,6 +21,7 @@ class TasksController implements ResponseToTasks
     public function TaskCreateFailed()
     {
         // TODO: Implement TaskCreateFailed() method.
+        return 'view/index.view.php';
     }
 
 
