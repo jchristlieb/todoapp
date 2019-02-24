@@ -7,7 +7,9 @@
             "email": "mail@janchristlieb.de"
         }
     ],
-    "require": {},
+    "require": {
+        "symfony/routing": "^4.2"
+    },
     "autoload": {
         "psr-4": {
             "toDoApp\\": "src"
