@@ -1,6 +1,6 @@
 <?php require 'snippets/head.php'; ?>
 
-<header class="container">
+<header class="container mt-4 mb-4">
     <div class="row">
         <div class="col-12">
             <h1 class="display-4"><?= $title ?></h1>
