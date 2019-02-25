@@ -19,14 +19,35 @@ require 'snippets/head.php'
             <h2>My tasks</h2>
             <hr width="50%" align="left">
             <ul class="nav nav-tabs" id="taskTabs" role="tablist">
-                <li class="nav-item"><a class="nav-link" id="active-tab" data-toggle="tab" role="tab" href="#active">active</a></li>
+                <li class="nav-item"><a class="nav-link active" id="active-tab" data-toggle="tab" role="tab" href="#active">active</a></li>
                 <li class="nav-item"><a class="nav-link" id="inactive-tab" data-toggle="tab" role="tab" href="#inactive">inactive</a></li>
                 <li class="nav-item"><a class="nav-link" id="all-tab" data-toggle="tab" role="tab" href="#all">all</a></li>
             </ul>
 
             <div class="tab-content" id="taskTabsContent">
-                <div class="" id="" role=""
+                <div class="tab-pane show active container mt-3" id="active" role="tabpanel">
+                    <?php
+
+                    foreach ($uncompletedTasks as $task)
+                        echo '<li>' . $task['title'] . '</li>';
+                    ?>
+                </div>
+                <div class="tab-pane container mt-3" id="inactive" role="tabpanel">
+                    <?php
+
+                    foreach ($completedTasks as $task)
+                        echo '<li>' . $task['title'] . '</li>';
+                    ?>
+                </div>
+                <div class="tab-pane container mt-3" id="all" role="tabpanel">
+                    <?php
+
+                    foreach ($allTasks as $task)
+                        echo '<li>' . $task['title'] . '</li>';
+                    ?>
+                </div>
             </div>
+
 
 
 
